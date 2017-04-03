@@ -1,0 +1,22 @@
+html, body {
+	/*margin: 0px;*/
+	padding: 0px;
+	color: white;
+	text-align: center;
+}
+#container {
+	width: 600px;
+	/*height: 800px;*/
+	background-color: black;
+	margin-left: auto;
+	margin-right: auto;
+}
+#search, #type, #year {
+	display: inline-block;
+}
+#title {
+	padding-top: 20px;
+}
+#button {
+	margin-bottom: 10px;
+}

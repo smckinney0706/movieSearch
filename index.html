@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Movie Finder</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+
+<div id="container">
+	<h1 id="title">Movie Finder</h1>
+	<hr>
+	<h2 id="search">Search by Title:</h2>
+	<input type="text" placeholder="Search Movies by Title" id="movieInput">
+	<br>
+	<h4 id="filter">Filter Search:</h4>
+	
+	<h6 id="year">Year:</h6>
+	<input type="text" placeholder="Filter Search by Year" id="yearInput">
+	<h6 id="type">Type:</h6>
+	<select>
+		<option value="select">(Select Type)</option>
+  		<option value="movie">Movie</option>
+  		<option value="opel">Series</option>
+  		<option value="audi">Episode</option>
+	</select>
+	<!-- <div id="button">Search</div> -->
+	<br>
+	<button type="button" id="button">Search</button>
+	<hr>
+	<div id="content"></div>
+
+
+
+</div>
+
+<script src="scripts/jquery.js"></script>
+<script src="scripts/main.js"></script>	
+</body>
+</html>
