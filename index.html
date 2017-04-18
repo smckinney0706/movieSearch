@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div id="container">
+<div id="container" ng-app="movieApp" ng-controller="movieCtrl">
 	<h1 id="title">Movie Finder</h1>
 	<hr>
 	<h2 id="search">Search by Title:</h2>
@@ -18,23 +18,29 @@
 	<h6 id="year">Year:</h6>
 	<input type="text" placeholder="Filter Search by Year" id="yearInput">
 	<h6 id="type">Type:</h6>
+	<input type="text" placeholder="(movie, series, episode)" id="typeInput">
+	<!-- <h6 id="type">Type:</h6>
 	<select>
-		<option value="select">(Select Type)</option>
-  		<option value="movie">Movie</option>
-  		<option value="opel">Series</option>
-  		<option value="audi">Episode</option>
-	</select>
+		<option class="type" value="select">(Select Type)</option>
+  		<option class="type" value="movie">Movie</option>
+  		<option class="type" value="opel">Series</option>
+  		<option class="type" value="audi">Episode</option>
+	</select> -->
 	<!-- <div id="button">Search</div> -->
 	<br>
-	<button type="button" id="button">Search</button>
+	<button type="button" id="button" ng-click="showMovies()">Search</button>
 	<hr>
-	<div id="content"></div>
+	<div class="films" ng-repeat="x in movies">
+		<h2>{{x.Title}}</h2>
+		<img src="{{x.Poster}}" />
+	</div>
 
 
 
 </div>
 
 <script src="scripts/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="scripts/main.js"></script>	
 </body>
 </html>
